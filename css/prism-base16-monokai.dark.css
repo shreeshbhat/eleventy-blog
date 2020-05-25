@@ -1,5 +1,6 @@
 code[class*="language-"], pre[class*="language-"] {
-	font-size: 14px;
+  font-size: max(1rem, min(0.5rem + 0.75vw, 2.5rem));
+	font-size: clamp(1rem, 0.5rem + 0.75vw, 2.5rem);
 	line-height: 1.375;
 	direction: ltr;
 	text-align: left;

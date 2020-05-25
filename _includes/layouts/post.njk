@@ -2,8 +2,21 @@
 layout: layouts/base.njk
 templateClass: tmpl-post
 ---
-<h1>{{ title }}</h1>
+<div class="post-wrapper">
+  <h1>{{ title }}</h1>
+  {%- if date != null %}
+  <div class="post-detail">
+    <p>{{ helpers.getReadableDate(date) }} </p>
+    <p class="reading-time"> {{ helpers.getReadingTime(content) }} minute read</p>
+    {% for tag in tags %}
+      {%- if collections.tagList.indexOf(tag) != -1 -%}
+      {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+      <a href="{{ tagUrl | url }}" class="tag">{{ tag }}</a>
+      {%- endif -%}
+    {% endfor %}
+  </div>
+  {%- endif -%}
+  {{ content | safe }}
 
-{{ content | safe }}
-
-<p><a href="{{ '/' | url }}">← Home</a></p>
+  <p><a href="{{ '/' | url }}">← Home</a></p>
+</div>

@@ -5,8 +5,10 @@ eleventyNavigation:
   key: Archive
   order: 2
 ---
+<div class="list-wrapper">
+  <h1>Archive</h1>
 
-<h1>Archive</h1>
-
-{% set postslist = collections.posts %}
-{% include "postslist.njk" %}
+  {% set postslist = collections.posts %}
+  {% include "postslist.njk" %}
+  <p>See <a href="{{ '/tags/' | url }}">all tags</a>.</p>
+</div>
