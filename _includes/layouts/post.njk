@@ -7,7 +7,7 @@ templateClass: tmpl-post
   {%- if date != null %}
   <div class="post-detail">
     <p>{{ helpers.getReadableDate(date) }} </p>
-    <p class="reading-time"> {{ helpers.getReadingTime(content) }} minute read</p>
+    <p class="reading-time"> {{ helpers.formatReadingTime(content) }} {{ helpers.getReadingTime(content) }} minute read</p>
     {% for tag in tags %}
       {%- if collections.tagList.indexOf(tag) != -1 -%}
       {% set tagUrl %}/tags/{{ tag }}/{% endset %}

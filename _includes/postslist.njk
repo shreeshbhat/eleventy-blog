@@ -11,7 +11,7 @@
         {%- endif -%}
       {% endfor %}
     <br/>
-    <small>{{ helpers.getReadingTime(post.templateContent) }} minute read</small>
+    <small> {{ helpers.formatReadingTime(post.templateContent) }} {{ helpers.getReadingTime(post.templateContent) }} minute read</small>
     </div>
   </li>
 {% endfor %}
