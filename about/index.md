@@ -7,7 +7,7 @@ eleventyNavigation:
   order: 3
 ---
 
-Hi, I'm Shreesh Bhat, a Senior Software Engineer at Manhattan Associates, where I love building websites.
+Hi, I'm Shreesh Bhat, a Senior Software Engineer at Manhattan Associates, where I love building User Interfaces and framework to generate UIs.
 My pronouns are they/their.
 
 I care about performance, inclusive design, and compassionate coding.
